@@ -1,4 +1,4 @@
-const API_BASE = 'https://e-commerce-cart-3vv0.onrender.com';
+const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000';
 
 export async function getProducts() {
   const res = await fetch(`${API_BASE}/api/products`);
