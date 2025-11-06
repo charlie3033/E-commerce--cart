@@ -4,7 +4,10 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000","https://your-frontend.vercel.app"],
+  credentials:true
+}));
 
 const productRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');
